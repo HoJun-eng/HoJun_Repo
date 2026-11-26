@@ -1,0 +1,107 @@
+{
+  "passPercent": 80,
+  "quiz": {
+    "questionsPerRound": 0
+  },
+  "playerForm": {
+    "maxGroupSize": 10,
+    "ageRanges": [
+      "12 and under",
+      "13-17",
+      "18-39",
+      "40-59",
+      "60 and above"
+    ]
+  },
+  "prizeId": {
+    "prefix": "#W",
+    "digits": 5
+  },
+  "text": {
+    "landingTitle": "Play & Win",
+    "landingSubtitle": "FunFest @ Downtown West, by Harbour Point Community Club",
+    "startButton": "Start",
+    "formTitle": "Who's playing?",
+    "nicknameLabel": "Nickname or team name",
+    "groupSizeLabel": "How many people are in your group?",
+    "ageLabel": "Age ranges in your group (pick all that apply)",
+    "formError": "Please enter a nickname and pick at least one age range.",
+    "continueButton": "Continue",
+    "selectTitle": "Pick a game",
+    "quizName": "Fun-Fact Quiz",
+    "miniGameName": "Feed the Dino",
+    "winRule": "Score at least {passScore} out of {max} to win.",
+    "questionCount": "Question {current} of {total}",
+    "loseTitle": "You lose",
+    "loseMessage": "You scored {score} out of {max}. You need {passScore} to win.",
+    "retryButton": "Try again",
+    "otherGameButton": "Back to game select",
+    "winTitle": "You win!",
+    "winMessage": "Show this screen at the prize counter to collect your prize.",
+    "winScore": "{game}: {score} out of {max}",
+    "prizeIdLabel": "Your prize ID",
+    "savingWin": "Getting your prize ID…",
+    "saveError": "We couldn't get your prize ID. Keep this page open and try again.",
+    "saveRetryButton": "Try again",
+    "doneButton": "Prize collected",
+    "doneConfirm": "Has the prize been collected? This screen will close.",
+    "miniGameRules": "Eat the meat and reject the rock. Tap before time runs out!",
+    "miniGameStartButton": "Start game",
+    "plateCount": "Plate {current} of {total}",
+    "miniGameScore": "Score: {score}",
+    "eatButton": "Eat",
+    "rejectButton": "Reject",
+    "adminTitle": "Admin",
+    "adminGroups": "Player groups",
+    "adminPeople": "People playing",
+    "adminViews": "Final Screen views",
+    "adminPrizes": "Prizes issued",
+    "adminGame": "Game",
+    "adminPicked": "Picked",
+    "adminWins": "Wins",
+    "adminLosses": "Losses",
+    "adminPrizeList": "Prize IDs (newest first)",
+    "adminNoPrizes": "No prizes yet.",
+    "adminRefresh": "Refresh",
+    "adminUpdated": "Last updated {time}",
+    "adminError": "Couldn't load the stats. Check that the server is running."
+  },
+  "miniGame": {
+    "plates": 10,
+    "secondsPerPlate": 3.5,
+    "slideSeconds": 0.75,
+    "reactionSeconds": 1,
+    "dino": {
+      "neutral": {
+        "image": "/images/dino-neutral.png",
+        "placeholder": "🦖"
+      },
+      "happy": {
+        "image": "/images/dino-happy.png",
+        "placeholder": "😄"
+      },
+      "no": {
+        "image": "/images/dino-no.png",
+        "placeholder": "🙅"
+      },
+      "sad": {
+        "image": "/images/dino-sad.png",
+        "placeholder": "😢"
+      }
+    },
+    "foods": [
+      {
+        "name": "Meat",
+        "image": "/images/meat.png",
+        "placeholder": "🍖",
+        "action": "eat"
+      },
+      {
+        "name": "Rock",
+        "image": "/images/rock.png",
+        "placeholder": "🪨",
+        "action": "reject"
+      }
+    ]
+  }
+}

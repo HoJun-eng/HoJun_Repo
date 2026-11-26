@@ -91,10 +91,31 @@ You can use any framework or library, as long as `npm install` and `npm start` s
 Replace this section before you submit.
 
 - **Where to change the settings:**
+  - `src/data/config.json`: pass mark (`passPercent`), questions per round (`quiz.questionsPerRound`, 0 = all), player form options, prize ID format, mini-game plate count, timings, foods and image paths (`miniGame`), and screen text (`text`).
+  - `src/data/questions.json`: the quiz questions, options and correct answers.
+  - To keep the longest mini-game under 1 minute, `plates` × (`secondsPerPlate` + `reactionSeconds`) should be below 60.
+
 - **How saving and loading works, and why I chose that format** (or why I left it out):
+  The app records player details, game picks, results, prizes and Final Screen views, and sends them to `server.js`, which saves them in `data/records.json`. The Admin Screen (add `#admin` to the app address) loads these records, calculates the stats and refreshes every 10 seconds. I used JSON because it works directly with JavaScript and handles records with different fields, such as a list of age ranges. The server issues prize numbers so that two phones don't get the same one. If the server is unreachable, statistics wait on the phone and are resent while the app is open, and a winner can retry to get their prize ID.
+
 - **Assumptions I made:**
+  - Names, group size, age range are acceptable to be collected, so privacy isn't violated
+  - The number of players is shown both as player groups (forms submitted) and people (total group size).
+  - Each win gets 1 prize ID, and the group cannot get the prize again as their phone will be stuck on that screen. But if they were to use a different phone, then they will be able to bypass this to claim multiple prizes
+  - The prize ID is only unique to the user phone
+
 - **What I prioritised, and why:**
+  - The full flow on mobile came first because it is the minimum requirement, followed by the custom mini-game, then data collection and the Admin Screen. I kept the controls large and simple for players of all ages, and kept settings easy to change for future events. Prize IDs are running numbers (e.g. #W00001) so they are easy for counter staff to read and show how many prizes have been issued.
+
 - **What I left out or didn't finish, and why:**
+  - A limit of one prize per phone. I wanted a phone that has already won to be unable to claim another prize, but this isn't in the current version. Refreshing the winning screen keeps the same prize ID, but after tapping "Prize collected", or opening the app in a new tab, a player can play and win again. Players using a different phone could still win again, which I accept as I can't reliably prevent it.
+  - No password on the Admin Screen. A real event would need a login checked by the server.
+
 - **Time planned vs. time spent:**
+  - Around 2 to 3 hours
+
 - **How I used AI** (and one suggestion I changed or didn't use):
+  - I planned the screen flow and designed the mini-game, and used Claude (an AI assistant) to assist in writing the code and test the app. One suggestion I changed: it first used random prize codes, and I changed these to running numbers to make wins easier to track.
+
 - **Anything I'm unsure about:**
+  - I was unsure on whether the game must be related to the mascot or event itself, so I decided to use Ransack's mascot (I apologise for it being badly drawn) as part of the game

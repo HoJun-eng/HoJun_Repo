@@ -1,5 +1,8 @@
 node_modules
 dist
+
+# Saved app data
+/data/
 .env
 .env.*
 *.log
